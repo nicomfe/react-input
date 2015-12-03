@@ -6,7 +6,8 @@
   "scripts": {
     "prepublish": "make js",
     "test": "`npm bin`/babel-doctor",
-    "start": "NODE_ENV=development node server.js"
+    "start": "NODE_ENV=development node server.js",
+    "build": "babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -52,5 +53,10 @@
     "webpack": "^1.12.3",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.4.1"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
   }
 }
